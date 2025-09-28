@@ -1,19 +1,35 @@
 /*-- scss:defaults --*/
 
 $theme-light: #FFF4E0;
-$theme-yellow: #FFE0A8AA;
+$theme-yellow: #432da5;
 $theme-orange: #D97146;
-$theme-red: #AD5769;
-$theme-grey: #515966;
-$theme-lightgrey: #90A1B8;
+$theme-red: #090131;
+$theme-grey: #FFF4E0;
+$theme-lightgrey: #ffde59;
+
+// dark colors
+$dark-bg-text-color:	#F0F0F0;
+$dark-bg-code-color:  #D97146;
+$dark-bg-link-color:	 #D97146;
 
 $body-bg: $theme-light;
 $body-color: $theme-grey;
-$link-color: $theme-red;
+$link-color: $theme-orange;
 
 $code-block-font-size: 1em;
 
+
 /*-- scss:rules --*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$font-family-sans-serif: "Dosis", sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace !default;
+$link-color: $theme-orange;
+
 
 .orange {
   color: $theme-orange;
@@ -47,7 +63,17 @@ $code-block-font-size: 1em;
 }
 
 .flow {
-  background-image: url(https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image:  url(imagenes/hexs.png);
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+	animation: animate 40s linear infinite;
+	font-weight: 900;
+}
+
+
+.hexs {
+  background-image: url(imagenes/hexs.png);
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -57,9 +83,101 @@ $code-block-font-size: 1em;
 
 @keyframes animate {
 	0% {
-		background-position: left 0px top 10px;
+		background-position: left 50px top 350px;
 	}
 	40% {
-		background-position: left 800px top 10px;
+		background-position: left 900px top 10px;
 	}
+}
+
+
+
+.arg-title1 {
+  h2 {
+    text-align: left;
+    font-size: 3.5em;
+    font-family: "Abril Fatface", serif;
+    width: 80%;
+  }
+
+  h3 {
+    color: $theme-red;
+    text-align: left;
+    width: 80%;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.arg-title3 {
+  color: $theme-red;   // se hereda a p, li, etc.
+  width: 30%;
+
+  h2 {
+    color: $theme-yellow;
+    text-align: left;
+    font-size: 3.5em;
+    font-family: "Abril Fatface", serif;
+    width: 80%;
+  }
+
+  h3 {
+    color: $theme-red;
+    text-align: left;
+    width: 80%;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+}
+
+.arg-title2 {
+  h2 {
+    text-align: left;
+    font-size: 3.5em;
+    font-family: "Abril Fatface", serif;
+  }
+
+  h3 {
+    color: $theme-red;
+    text-align: left;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
+
+.redes {
+
+  h2 {
+    text-align: left;
+    font-size: 3.5em;
+    font-family: "Abril Fatface", serif;
+  }
+
+  h3 {
+    color: $theme-red;
+    text-align: left;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
+
+.reveal :not(pre) > code { /* #FFE0A8AA en tu tema */
+  color: #ffde59;                /* buen contraste sobre amarillo */
+  padding: .05em .35em;
+  border-radius: .25em;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+}
+
+
+.reveal .slides section .arg-title3{
+  display: block;
+  width: 50%;
+  margin-left: 0;      /* o centrar: margin: 0 auto; */
+  /* opcional para notar el cambio */
+  /* background: rgba(255,224,168,.3); */
 }

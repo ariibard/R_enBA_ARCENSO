@@ -1,0 +1,5 @@
+/* fondos.css */
+.arg-title1:is(.slide-background){ background-image:url('imagenes/fondo_1.png'); background-size:cover; background-position:center; background-repeat:no-repeat; }
+.arg-title2:is(.slide-background){ background-image:url('imagenes/fondo_2.png'); background-size:cover; background-position:center; background-repeat:no-repeat; }
+.arg-title3:is(.slide-background){ background-image:url('imagenes/fondo_3.png'); background-size:cover; background-position:center; background-repeat:no-repeat; }
+.redes:is(.slide-background){ background-image:url('imagenes/redes.png'); background-size:cover; background-position:center; background-repeat:no-repeat; }
